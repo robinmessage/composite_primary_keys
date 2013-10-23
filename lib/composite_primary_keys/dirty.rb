@@ -15,5 +15,14 @@ module ActiveModel
       end
     end
     alias_method :ids_hash_was, :primary_key_was
+
+    alias_method :old_attribute_was, :attribute_was
+    def attribute_was(attr)
+      if Array === attr
+        attr.map {|attr| old_attribute_was(attr)}
+      else
+        old_attribute_was(attr)
+      end
+    end
   end
 end
