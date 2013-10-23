@@ -31,6 +31,7 @@ unless defined?(ActiveRecord)
 end
 
 # AR files we override
+require 'active_record/autosave_association'
 require 'active_record/counter_cache'
 require 'active_record/fixtures'
 require 'active_record/persistence'
@@ -66,6 +67,7 @@ require 'active_record/validations/uniqueness'
 
 
 # CPK files
+require 'composite_primary_keys/autosave_association'
 require 'composite_primary_keys/persistence'
 require 'composite_primary_keys/base'
 require 'composite_primary_keys/core'
