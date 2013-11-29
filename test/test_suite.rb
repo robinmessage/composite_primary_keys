@@ -17,10 +17,10 @@
   test_polymorphic
   test_predicates
   test_santiago
+  test_serialize
   test_tutorial_example
   test_update
   test_validations
-  test_delete_without_pk
 ).each do |test|
   require File.expand_path("../#{test}", __FILE__)
 end
